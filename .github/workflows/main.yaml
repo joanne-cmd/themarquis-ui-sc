@@ -51,3 +51,7 @@ jobs:
       - name: Build Next.js project
         run: yarn build
         working-directory: ./packages/nextjs
+        
+      - name: Run Security Audit
+        run: npm audit --audit-level=moderate
+        working-directory: ./packages/nextjs
